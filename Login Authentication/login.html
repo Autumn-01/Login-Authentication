@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+        <meta charset="UTF-8">
+    </head>
+    <script type="text/javascript">
+    function display(form) {
+        if(form.username.value=="root") {
+            if(form.password.value=="root")  {
+                location="page2.html"
+            }
+            else {
+                alert("Invalid Password!");
+            }
+        }
+        else {
+            alert("Inavalid Username!");
+        }
+    }
+    </script>
+    <body>
+        <form>
+           Username: <input type="text" name="username" /><br><br>
+            Password: <input type="password" name="password" /><br><br>
+            <input type="button" value="Login" onclick="display(this.form)" />
+        </form>
+    </body>
+</html>
